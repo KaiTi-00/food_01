@@ -2,21 +2,18 @@
 <shape android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android">
     <stroke
         android:width="@dimen/dp_0.5"
-        android:color="#FFFFFF" />
+        android:color="@android:color/white" />
 
     <solid android:color="@android:color/white" />
 
     <corners
-        android:bottomLeftRadius="@dimen/dp_10"
-        android:bottomRightRadius="@dimen/dp_10"
-        android:topLeftRadius="@dimen/dp_10"
-        android:topRightRadius="@dimen/dp_10" />
+        android:radius="@dimen/dp_10" />
 
     <padding
         android:left="@dimen/dp_10"
         android:right="@dimen/dp_10"/>
 
     <size
-        android:height="@dimen/dp_search_height"
-        android:width="@dimen/dp_search_width"/>
+        android:height="@dimen/dp_50"
+        android:width="@dimen/dp_350"/>
 </shape>
