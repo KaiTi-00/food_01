@@ -7,14 +7,14 @@ import com.sunasterisk.food_01.data.model.RecipeEntry
 import org.json.JSONObject
 
 class PasreJson {
-    fun recipeParseJson(jsonObject: JSONObject): Recipe {
-        return Recipe(
+    fun recipeParseJson(jsonObject: JSONObject) =
+        Recipe(
             idRecipe = jsonObject.getString(RecipeEntry.ID_RECIPE),
             name = jsonObject.getString(RecipeEntry.NAME),
             category = jsonObject.getString(RecipeEntry.CATEGORY),
             area = jsonObject.getString(RecipeEntry.AREA),
             instructions = jsonObject.getString(RecipeEntry.INSTRUCTIONS),
-            tag = jsonObject.getString(RecipeEntry.TAG),
+            tags = jsonObject.getString(RecipeEntry.TAGS),
             urlImage = jsonObject.getString(RecipeEntry.URL_IMAGE),
             urlVideo = jsonObject.getString(RecipeEntry.URL_VIDEO),
             ingre1 = jsonObject.getString(RecipeEntry.INGRE1),
@@ -38,12 +38,11 @@ class PasreJson {
             measure9 = jsonObject.getString(RecipeEntry.MEASURE9),
             measure10 = jsonObject.getString(RecipeEntry.MEASURE10)
         )
-    }
 
     fun categoryParseJson(jsonObject: JSONObject) =
         Category(
-        name = jsonObject.getString(CategoryEntry.NAME),
-        image = jsonObject.getString(CategoryEntry.IMAGE),
-        description = jsonObject.getString(CategoryEntry.DECRIPTION)
-    )
+            name = jsonObject.getString(CategoryEntry.NAME),
+            image = jsonObject.getString(CategoryEntry.IMAGE),
+            description = jsonObject.getString(CategoryEntry.DECRIPTION)
+        )
 }

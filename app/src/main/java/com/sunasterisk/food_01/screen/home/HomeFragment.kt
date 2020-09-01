@@ -61,7 +61,7 @@ class HomeFragment : Fragment(), HomeContract.View, OnItemRecyclerViewClickListe
     override fun onGetRecipeRandomSuccess(recipe: MutableList<Recipe>) {
         listRecipe.addAll(recipe)
         textMealRecipe.text = listRecipe.first().name
-        textTagRecipe.text = listRecipe.first().tag
+        textTagRecipe.text = listRecipe.first().tags
         DownloadImage {
             imageMealThumbRecipe.setImageBitmap(it)
         }.execute(listRecipe.first().urlImage)
